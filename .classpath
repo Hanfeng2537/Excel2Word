@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/WJ/Downloads/poi-ooxml-5.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/WJ/Downloads/poi-5.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/WJ/Downloads/log4j-api-2.17.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/WJ/Downloads/openxml4j-bin-src-prealpha-070525.jar"/>
+	<classpathentry kind="lib" path="C:/Users/WJ/Downloads/poi-ooxml-lite-5.2.0.jar"/>
+	<classpathentry kind="lib" path="D:/wangjie/eclipse-workspace/Excel2Word/libs/poi-ooxml-lite-5.2.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
