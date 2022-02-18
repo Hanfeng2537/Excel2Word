@@ -1,2 +1,11 @@
+使用的是阿帕奇的POI接口
 Refer to POI:
 https://poi.apache.org/components/index.html
+
+过程中会遇到各种报错
+1. 找不到包
+解决:在上述连接中下载对应的包，然后在Build path -> Configure build path..中加入
+2. 添加了包后也找不到
+解决：是因为需要添加到依赖里面去， 在Run As -> Run Configuration -> Dependencies里面加入
+3. 在依赖里面添加后，run的时候提示包不存在
+解决：需要在libs里面刷新，让程序设别出来新下载或者拷贝进来的包才可以
