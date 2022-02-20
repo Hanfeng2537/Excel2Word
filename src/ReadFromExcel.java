@@ -19,8 +19,10 @@ public class ReadFromExcel {
 
 	public void read() {
 		//File excelFile = new File("D:\\wangjie\\eclipse-workspace\\Excel2Word\\testpkg\\test.xlsx");
+		String exampleFilePath = "testpkg\\test1.xlsx";
 		try {
-			InputStream excelFile = new FileInputStream("D:\\wangjie\\eclipse-workspace\\Excel2Word\\testpkg\\test1.xlsx");
+			//InputStream excelFile = new FileInputStream("D:\\Excel2Word\\testpkg\\test1.xlsx");
+			InputStream excelFile = new FileInputStream(exampleFilePath);
 			try (XSSFWorkbook xwb = new XSSFWorkbook(excelFile)) {
 				//int count = xwb.getNumberOfSheets();
 				XSSFSheet sheet = xwb.getSheetAt(0);
