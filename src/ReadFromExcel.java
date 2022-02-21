@@ -19,18 +19,16 @@ public class ReadFromExcel {
 	}
 
 	public PatientInfo read(String exmNum, PatientInfo pi) {
-		//File excelFile = new File("D:\\wangjie\\eclipse-workspace\\Excel2Word\\testpkg\\test.xlsx");
-		String exampleFilePath = "testpkg\\test1.xlsx";
-			//InputStream excelFile = new FileInputStream("D:\\Excel2Word\\testpkg\\test1.xlsx");
+		String exampleFilePath = "testpkg/test1.xlsx";
 			try (InputStream excelFile = new FileInputStream(exampleFilePath)) {
 				XSSFWorkbook xwb = new XSSFWorkbook(excelFile);
 				//int count = xwb.getNumberOfSheets();
-				XSSFSheet sheet = xwb.getSheetAt(0);
+				XSSFSheet sheet = xwb.getSheetAt(0); //read the first sheet
 				for (Row row: sheet) {
 					for (Cell cell: row) {
 						
 						switch (cell.getCellType()) {
-						case STRING:
+						case STRING:  //to find the patient according to exmNum.
 							if(cell.getRichStringCellValue().getString().equals(exmNum)) { 
 								int rowNo =row.getRowNum(); 
 								System.out.println("find the parient info in line: " + rowNo);
