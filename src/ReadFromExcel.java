@@ -1,4 +1,5 @@
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -19,8 +20,19 @@ public class ReadFromExcel {
 	}
 
 	public PatientInfo read(String exmNum, PatientInfo pi) {
-		String exampleFilePath = "testpkg/test1.xlsx";
-			try (InputStream excelFile = new FileInputStream(exampleFilePath)) {
+		File directory = new File("");//设定为当前文件夹
+		String exampleFilePath = "";
+		try {
+			exampleFilePath = directory.getAbsolutePath();
+			System.out.println(directory.getCanonicalPath());
+			System.out.println(directory.getAbsolutePath());//获取绝对路径 
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		String exampleFileName = "input.xlsx";
+			try (InputStream excelFile = new FileInputStream(exampleFilePath + "/" + exampleFileName)) {
 				XSSFWorkbook xwb = new XSSFWorkbook(excelFile);
 				//int count = xwb.getNumberOfSheets();
 				XSSFSheet sheet = xwb.getSheetAt(0); //read the first sheet
@@ -63,7 +75,10 @@ public class ReadFromExcel {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
+		}
+		System.out.println("Cound not find your patient....");
+		System.out.println("Failed!");
+		System.exit(0);
 		return null;
 	}
 	

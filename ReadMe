@@ -11,3 +11,20 @@ https://poi.apache.org/apidocs/5.0/
 解决：是因为需要添加到依赖里面去， 在Run As -> Run Configuration -> Dependencies里面加入
 3. 在依赖里面添加后，run的时候提示包不存在
 解决：需要在libs里面刷新，让程序设别出来新下载或者拷贝进来的包才可以
+
+
+运行：
+1. PC必须要安装jdk，才可以运行，jdk下载地址
+https://www.oracle.com/java/technologies/downloads/#java11
+
+2. 运行命令：java -jar Excel2Word.jar
+
+Note: Must read the below tips:
+ Please copy your input Excel file to this folder, and the name must be "input.xlsx"
+ Please copy your docx samplein this folder, the name must be "example.docx"
+ To get the patient information, you need to know the 样本编号 that you need to search
+ This soft will output the docx file to this folder accroding input 样本编号 by you
+ The output file name will be output_<patient name>.docx
+ Now, please input the 样本编号 that you need to search, and then press Enter key
+ 
+ 
