@@ -1,4 +1,12 @@
+import java.awt.Button;
+import java.awt.FlowLayout;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.Scanner;
+
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class Main {
 
@@ -11,16 +19,21 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		PatientInfo patient = new PatientInfo();
-		ReadFromExcel rfe = new ReadFromExcel();
-		System.out.println(NOTE);
-		Scanner reader = new Scanner(System.in);
-		String sampleNo = reader.nextLine();
-		//rfe.read("22S00001", patient);
-		rfe.read(sampleNo, patient);
-		System.out.println(patient);
 		
-		WriteToWord wtw = new WriteToWord();
-		wtw.write(patient);
+		FileChooser fc = new FileChooser();
+		
+		if(fc.executeAvai) {
+			PatientInfo patient = new PatientInfo();
+			ReadFromExcel rfe = new ReadFromExcel();
+			System.out.println(NOTE);
+			Scanner reader = new Scanner(System.in);
+			String sampleNo = reader.nextLine();
+			//rfe.read("22S00001", patient);
+			rfe.read(sampleNo, patient);
+			System.out.println(patient);
+			
+			WriteToWord wtw = new WriteToWord();
+			wtw.write(patient);
+		}
 	}
 }
