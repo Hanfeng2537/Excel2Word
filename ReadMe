@@ -21,10 +21,11 @@ https://www.oracle.com/java/technologies/downloads/#java17
 
 Note: Must read the below tips:
  Please copy your input Excel file to this folder, and the name must be "input.xlsx"
- Please copy your docx samplein this folder, the name must be "example.docx"
+ Please copy your docx sample this folder, the name must be "example.docx"
  To get the patient information, you need to know the 样本编号 that you need to search
  This soft will output the docx file to this folder accroding input 样本编号 by you
  The output file name will be output_<patient name>.docx
  Now, please input the 样本编号 that you need to search, and then press Enter key
  
- 
+ 更新之后，可以直接界面化操作
+ 但是word的样例文件必须要是"example.docx"， 和运行目录一致，运行目录可以再第一次打开程序后，查看默认保存的目录就是要当前运行的目录
